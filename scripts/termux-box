@@ -4,12 +4,12 @@ cd $HOME/termux-box
 
 if [ ! -e ubuntu-fs/opt/wine ]; then
     echo "Select which Wine to download"
-    echo "1) 8.2 staging"
-    echo "2) 8.14 ge-custom"
+    echo "1) Wine 9.19 amd64"
+    echo "2) Wine Proton 9.0"
     read opcode
     case $opcode in
     1)
-    if ! wget -q --show-progress https://github.com/Kron4ek/Wine-Builds/releases/download/8.2/wine-8.2-staging-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
+    if ! wget -q --show-progress https://github.com/Kron4ek/Wine-Builds/releases/download/9.19/wine-9.19-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
     echo "Download failed, restart termux-box"
     exit
     else
@@ -17,7 +17,7 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     fi
     ;;
     2)
-    if ! wget -q --show-progress https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-14/wine-lutris-GE-Proton8-14-x86_64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
+    if ! wget -q --show-progress https://github.com/Kron4ek/Wine-Builds/releases/download/proton-9.0-3/wine-proton-9.0-3-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
     echo "Download failed, restart termux-box"
     exit
     else
