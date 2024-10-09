@@ -43,6 +43,8 @@ wget https://github.com/MarkZingrim/termux-box/raw/main/components/termux-x11-ni
 dpkg -i termux-x11-nightly-1.03.01-0-all.deb &>/dev/null
 rm -rf termux-x11-nightly-1.03.01-0-all.deb
 
+clear
+
 echo "Downloading preconfigured Rootfs..."
 cd $HOME/termux-box
 wget -q --show-progress https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/rootfs.tar.xz
@@ -52,16 +54,16 @@ tar -xf rootfs.tar.xz
 rm -rf rootfs.tar.xz
 
 cd $HOME/termux-box/ubuntu-fs/opt
-wget https://github.com/olegos2/termux-box/raw/main/scripts/scripts.tar.gz &>/dev/null
+wget https://github.com/MarkZingrim/termux-box/raw/main/scripts/scripts.tar.gz &>/dev/null
 tar -xf scripts.tar.gz
 rm -rf scripts.tar.gz
 
 cd $HOME/termux-box/
-wget -N https://github.com/olegos2/termux-box/raw/main/scripts/termux-box &>/dev/null
+wget -N https://github.com/MarkZingrim/termux-box/raw/main/scripts/termux-box &>/dev/null
 chmod +x termux-box
 mv termux-box $PREFIX/bin/
-wget -N https://github.com/olegos2/termux-box/raw/main/scripts/start-proot.sh &>/dev/null
-wget -N https://github.com/olegos2/termux-box/raw/main/scripts/start-chroot.sh &>/dev/null
+wget -N https://github.com/MarkZingrim/termux-box/raw/main/scripts/start-proot.sh &>/dev/null
+wget -N https://github.com/MarkZingrim/termux-box/raw/main/scripts/start-chroot.sh &>/dev/null
 chmod +x start-proot.sh
 chmod +x start-chroot.sh
 
