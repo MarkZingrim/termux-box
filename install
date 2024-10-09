@@ -12,7 +12,7 @@ while true; do
         break
     fi
 done
-    else
+    
         echo "If you denied permission, change it manually in termux app settings now"
     fi
     sleep 2
