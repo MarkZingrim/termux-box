@@ -3,12 +3,15 @@
 cd
 echo ""
 echo "Сlick on allow to proceed"
-termux-setup-storage & sleep 4 &>/dev/null
-
+if [ ! -e storage ]; then
+    termux-setup-storage &>/dev/null
+fi
 while true; do
     if [ -e storage ]; then
         rm -rf /sdcard/termux-box
         break
+    fi
+done
     else
         echo "If you denied permission, change it manually in termux app settings now"
     fi
